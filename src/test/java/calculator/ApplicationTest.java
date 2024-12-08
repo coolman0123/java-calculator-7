@@ -17,6 +17,22 @@ class ApplicationTest extends NsTest {
     }
 
     @Test
+    void 일반1() {
+        assertSimpleTest(() -> {
+            run("1,2:3");
+            assertThat(output()).contains("결과 : 6");
+        });
+    }
+
+    @Test
+    void 일반2() {
+        assertSimpleTest(() -> {
+            run("1,2,3,4,5:6:7");
+            assertThat(output()).contains("결과 : 28");
+        });
+    }
+
+    @Test
     void 예외_테스트() {
         assertSimpleTest(() ->
             assertThatThrownBy(() -> runException("-1,2,3"))
