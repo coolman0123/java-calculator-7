@@ -2,7 +2,6 @@ package calculator.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.swing.JToolBar.Separator;
 
 public class InputParser {
     public static final String DEFAULT_SEPARATOR = ",|:";

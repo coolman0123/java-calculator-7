@@ -11,8 +11,8 @@ public class CalculatorController {
     public void run(){
         outputView.requestInput();
         String input = inputView.input();
-        input = InputParser.handleCustomer(input);
-        String[] caculate = InputParser.parseInput(input);
+        input = inputParser.handleCustomer(input);
+        String[] caculate = inputParser.parseInput(input);
         int result = sum(caculate);
         outputView.printResult(result);
 
